@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PageTransition from "./components/PageTransition";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css"; // Import the CSS for styling
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -71,13 +73,18 @@ export default function Home() {
               Join MEClub and grow with a community of driven Muslim
               entrepreneurs.
             </p>
-            <div className="flex space-x-4 mb-6">
+            <div className="relative flex space-x-4 mb-6">
+              <Tippy content="Time left till first meetup. Attendance is only by invite. Every member has 3 invites they can give out.">
+                <div className="absolute -top-4 -right-4 text-white bg-gray-800 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+                  i
+                </div>
+              </Tippy>
               {loading ? (
                 <div className="flex space-x-4">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-700 animate-pulse rounded"></div>
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-700 animate-pulse rounded"></div>
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-700 animate-pulse rounded"></div>
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-700 animate-pulse rounded"></div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 animate-pulse rounded-full"></div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 animate-pulse rounded-full"></div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 animate-pulse rounded-full"></div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 animate-pulse rounded-full"></div>
                 </div>
               ) : (
                 <>
