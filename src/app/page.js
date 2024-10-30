@@ -26,10 +26,9 @@ export default function Home() {
               Muslim Entrepreneur Club
             </h1>
             <p className="mb-6 md:mb-10 text-lg md:text-xl text-white max-w-md md:max-w-2xl">
-              Something exciting is coming to Vancouver! Join a vibrant
-              community of Muslim entrepreneurs and unlock exclusive access to
-              resources, mentorship, and a network that will elevate your
-              business to new heights.
+              Join MEClub, a thriving community of Muslim entrepreneurs. Access
+              exclusive resources, connect with experienced mentors, and tap
+              into a powerful network to fast-track your growth.
             </p>
             <a
               href="https://fmsnznt77ni.typeform.com/to/SOKl0PiU"
